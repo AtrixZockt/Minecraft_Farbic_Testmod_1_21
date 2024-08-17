@@ -39,7 +39,7 @@ public class ModBlocks {
             new WallBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
 
     public static final Block RUBY_DOOR = registerBlock("ruby_door",
-            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR).nonOpaque()));
     public static final Block RUBY_TRAPDOOR = registerBlock("ruby_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
 
