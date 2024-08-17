@@ -1,16 +1,21 @@
 package net.digii.tutorialmod.item.custom;
 
+import net.digii.tutorialmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 
+import java.util.List;
 import java.util.Objects;
 
 public class MetalDetectorItem extends Item {
@@ -66,6 +71,12 @@ public class MetalDetectorItem extends Item {
 
 
     private boolean isValuableBlock(BlockState state) {
-        return state.isOf(Blocks.DIAMOND_ORE) || state.isOf(Blocks.IRON_ORE);
+        return state.isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("tooltip.tutorialmod.metal_detector.tooltip").formatted(Formatting.DARK_GREEN));
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

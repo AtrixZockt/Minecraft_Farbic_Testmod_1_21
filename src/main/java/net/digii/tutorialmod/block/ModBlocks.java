@@ -34,8 +34,8 @@ public class ModBlocks {
     }
 
     // register a provided block item
-    private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(Tutorialmod.MOD_ID, name),
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, Identifier.of(Tutorialmod.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
     }
 

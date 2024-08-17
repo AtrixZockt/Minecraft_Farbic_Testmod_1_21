@@ -19,6 +19,7 @@ public class ModItems {
             registerItem("raw_ruby", new Item(new Item.Settings())),
             registerItem("metal_detector", new MetalDetectorItem(new Item.Settings().maxDamage(64))),
             registerItem("tomato", new Item(new Item.Settings().food(ModFoodComponents.TOMATO))),
+            registerItem("coal_briquette", new Item(new Item.Settings())),
     };
 
     // Registers a provided item

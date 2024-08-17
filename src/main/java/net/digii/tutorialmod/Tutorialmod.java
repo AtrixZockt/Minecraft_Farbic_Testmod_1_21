@@ -5,6 +5,7 @@ import net.digii.tutorialmod.item.ModItemGroups;
 import net.digii.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,5 +29,8 @@ public class Tutorialmod implements ModInitializer {
 		ModItems.registerModItems();
 
 		ModBlocks.registerModBlocks();
+
+		// Simple way to add fuel item (TODO: change used item once Item array is removed)
+		FuelRegistry.INSTANCE.add(ModItems.MODITEMS[4], 200);
 	}
 }
