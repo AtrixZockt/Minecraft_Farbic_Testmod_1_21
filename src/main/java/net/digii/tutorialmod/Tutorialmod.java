@@ -31,6 +31,6 @@ public class Tutorialmod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		// Simple way to add fuel item (TODO: change used item once Item array is removed)
-		FuelRegistry.INSTANCE.add(ModItems.MODITEMS[4], 200);
+		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
 	}
 }
