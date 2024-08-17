@@ -34,6 +34,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_RUBY_ORE, CustomAmountOreDrops(ModBlocks.RUBY_ORE, ModItems.RAW_RUBY, 2f, 5f));
         addDrop(ModBlocks.NETHER_RUBY_ORE, CustomAmountOreDrops(ModBlocks.RUBY_ORE, ModItems.RAW_RUBY, 2f, 5f));
         addDrop(ModBlocks.END_STONE_RUBY_ORE, CustomAmountOreDrops(ModBlocks.RUBY_ORE, ModItems.RAW_RUBY, 2f, 5f));
+
+        addDrop(ModBlocks.RUBY_STAIRS);
+        addDrop(ModBlocks.RUBY_TRAPDOOR);
+        addDrop(ModBlocks.RUBY_WALL);
+        addDrop(ModBlocks.RUBY_FENCE);
+        addDrop(ModBlocks.RUBY_FENCE_GATE);
+        addDrop(ModBlocks.RUBY_BUTTON);
+        addDrop(ModBlocks.RUBY_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.RUBY_DOOR, doorDrops(ModBlocks.RUBY_DOOR));
+        addDrop(ModBlocks.RUBY_SLAB, slabDrops(ModBlocks.RUBY_SLAB));
     }
 
     // Add a lootTable item with a defined min/max amount of drops

@@ -2,10 +2,7 @@ package net.digii.tutorialmod.block;
 
 import net.digii.tutorialmod.Tutorialmod;
 import net.digii.tutorialmod.block.custom.SoundBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -24,6 +21,28 @@ public class ModBlocks {
 
     public static final Block SOUND_BLOCK = registerBlock("sound_block", new SoundBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
 
+    public static final Block RUBY_STAIRS = registerBlock("ruby_stairs",
+            new StairsBlock(ModBlocks.RUBY_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block RUBY_SLAB = registerBlock("ruby_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+
+    public static final Block RUBY_BUTTON = registerBlock("ruby_button",
+            new ButtonBlock(BlockSetType.IRON, 10, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block RUBY_PRESSURE_PLATE = registerBlock("ruby_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+
+    public static final Block RUBY_FENCE = registerBlock("ruby_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block RUBY_FENCE_GATE = registerBlock("ruby_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block RUBY_WALL = registerBlock("ruby_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+
+    public static final Block RUBY_DOOR = registerBlock("ruby_door",
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
+    public static final Block RUBY_TRAPDOOR = registerBlock("ruby_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
+
     // Blocks to be registered
     public static final Block[] MODBLOCKS = new Block[]{
             RUBY_BLOCK,
@@ -32,7 +51,19 @@ public class ModBlocks {
             DEEPSLATE_RUBY_ORE,
             NETHER_RUBY_ORE,
             END_STONE_RUBY_ORE,
-            SOUND_BLOCK
+            SOUND_BLOCK,
+    };
+
+    public static final Block[] RUBY_POOL_BLOCKS = new Block[]{
+            RUBY_STAIRS,
+            RUBY_SLAB,
+            RUBY_BUTTON,
+            RUBY_PRESSURE_PLATE,
+            RUBY_FENCE,
+            RUBY_FENCE_GATE,
+            RUBY_WALL,
+            RUBY_DOOR,
+            RUBY_TRAPDOOR
     };
 
     // register a provided block

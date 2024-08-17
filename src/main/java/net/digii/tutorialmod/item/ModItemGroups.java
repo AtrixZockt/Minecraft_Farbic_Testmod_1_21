@@ -28,6 +28,10 @@ public class ModItemGroups {
                         for (Block block : ModBlocks.MODBLOCKS)
                             entries.add(block);
 
+                        // Add all ruby pool blocks to the group
+                        for (Block block : ModBlocks.RUBY_POOL_BLOCKS)
+                            entries.add(block);
+
                     }).build());
 
     public static void registerItemGroups() {
