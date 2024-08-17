@@ -1,6 +1,7 @@
 package net.digii.tutorialmod.item;
 
 import net.digii.tutorialmod.Tutorialmod;
+import net.digii.tutorialmod.item.custom.MetalDetectorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -15,7 +16,9 @@ public class ModItems {
     // Items to be registered
     public static final Item[] MODITEMS = new Item[]{
             registerItem("ruby", new Item(new Item.Settings())),
-            registerItem("raw_ruby", new Item(new Item.Settings()))
+            registerItem("raw_ruby", new Item(new Item.Settings())),
+            registerItem("metal_detector", new MetalDetectorItem(new Item.Settings().maxDamage(64))),
+            registerItem("tomato", new Item(new Item.Settings().food(ModFoodComponents.TOMATO))),
     };
 
     // Registers a provided item
