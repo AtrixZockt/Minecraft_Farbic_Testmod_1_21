@@ -5,7 +5,7 @@
   "item.tutorialmod.tomato": "Tomato",
   "item.tutorialmod.coal_briquette": "Coal Briguette",
 
-  "item.tutorialmod.baumsoldat_spawn_egg": "A Tree?",
+  "item.tutorialmod.baumsoldat_spawn_egg": "Just a spawn Egg",
 
   "block.tutorialmod.ruby_block": "Block of Ruby",
   "block.tutorialmod.raw_ruby_block": "Block of Raw Ruby",
@@ -27,6 +27,8 @@
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds Valuables underground.",
   "tooltip.tutorialmod.sound_block.tooltip": "Makes a sweet sound when right-clicked.",
+
+  "entity.tutorialmod.baumsoldat": "The king of trees",
 
   "itemgroup.ruby": "Ruby Group"
 }
