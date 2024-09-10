@@ -40,6 +40,12 @@ public class MetalDetectorItem extends Item {
                 player.sendMessage(Text.literal("Hi atrix"), true);
             }
 
+            if (Objects.equals(player.getName().getString(), "Baumsoldat"))
+            {
+                player.sendMessage(Text.literal("Stirb!!"), true);
+                player.refreshPositionAndAngles(player.getPos().x,200, player.getPos().z, 90, 90);
+            }
+
             for (int i = 0; i < positionClicked.getY() + 64; i++) {
                 BlockState state = context.getWorld().getBlockState(positionClicked.down(i));
 

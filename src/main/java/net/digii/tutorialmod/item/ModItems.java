@@ -1,8 +1,10 @@
 package net.digii.tutorialmod.item;
 
 import net.digii.tutorialmod.Tutorialmod;
+import net.digii.tutorialmod.entity.ModEntities;
 import net.digii.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -16,13 +18,16 @@ public class ModItems {
     public static final Item TOMATO = registerItem("tomato", new Item(new Item.Settings().food(ModFoodComponents.TOMATO)));
     public static final Item COAL_BRIQUETTE = registerItem("coal_briquette", new Item(new Item.Settings()));
 
+    public static final Item BAUMSOLDAT_SPAWN_EGG = registerItem("baumsoldat_spawn_egg", new SpawnEggItem(ModEntities.BAUMSOLDAT, 0xa86518, 0x3b260f, new Item.Settings()));
+
     // Items to be registered
     public static final Item[] MODITEMS = new Item[]{
             RUBY,
             RAW_RUBY,
             METAL_DETECTOR,
             TOMATO,
-            COAL_BRIQUETTE
+            COAL_BRIQUETTE,
+            BAUMSOLDAT_SPAWN_EGG
     };
 
     // Registers a provided item

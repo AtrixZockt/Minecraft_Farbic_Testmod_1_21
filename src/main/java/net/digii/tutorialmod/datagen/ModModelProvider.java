@@ -7,8 +7,12 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -52,6 +56,16 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         for (Item item : ModItems.MODITEMS)
+        {
+            if (item == ModItems.BAUMSOLDAT_SPAWN_EGG)
+            {
+                itemModelGenerator.register(ModItems.BAUMSOLDAT_SPAWN_EGG,
+                        new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+                continue;
+            }
+
             itemModelGenerator.register(item, Models.GENERATED);
+        }
+
     }
 }

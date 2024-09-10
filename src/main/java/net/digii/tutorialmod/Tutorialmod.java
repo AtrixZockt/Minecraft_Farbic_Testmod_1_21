@@ -1,10 +1,13 @@
 package net.digii.tutorialmod;
 
 import net.digii.tutorialmod.block.ModBlocks;
+import net.digii.tutorialmod.entity.ModEntities;
+import net.digii.tutorialmod.entity.custom.BaumsoldatEntity;
 import net.digii.tutorialmod.item.ModItemGroups;
 import net.digii.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +33,11 @@ public class Tutorialmod implements ModInitializer {
 
 		ModBlocks.registerModBlocks();
 
+		ModEntities.registerModEntities();
+
 		// Simple way to add fuel item (TODO: change used item once Item array is removed)
 		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.BAUMSOLDAT, BaumsoldatEntity.createBaumsoldatAttributes());
 	}
 }
