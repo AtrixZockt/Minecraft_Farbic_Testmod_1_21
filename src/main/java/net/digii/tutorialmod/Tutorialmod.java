@@ -22,6 +22,12 @@ public class Tutorialmod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	// Baumsoldat Boss variables
+	public static final Integer BAUMSOLDAT_BOSS_SPAWN_CHANCE = 10; //Chance in %
+	public static final Integer BAUMSOLDAT_BOSS_TIME_BETWEEN_SPAWNS = 6000; //6000ticks = 5min
+
+	public static Long lastBaumsoldatBossSpawnTime = 0L;
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

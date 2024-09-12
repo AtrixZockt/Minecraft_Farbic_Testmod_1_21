@@ -10,6 +10,9 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -71,8 +74,8 @@ public class BaumsoldatEntity extends HostileEntity {
         this.goalSelector.add(2, new TemptGoal(this, 1.25, Ingredient.ofItems(Items.STICK), false));
         //this.goalSelector.add(3, new MeleeAttackGoal(this, 1.0, false));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1D));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
-        this.goalSelector.add(3, new LookAroundGoal(this));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
+        this.goalSelector.add(4, new LookAroundGoal(this));
         this.goalSelector.add(2, new MeleeAttackGoal(this, 2, false));
 
         this.targetSelector.add(1, new RevengeGoal(this));
@@ -84,7 +87,7 @@ public class BaumsoldatEntity extends HostileEntity {
     public static DefaultAttributeContainer.Builder createBaumsoldatAttributes(){
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 50)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f)
                 .add(EntityAttributes.GENERIC_ARMOR, 1)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2);
     }

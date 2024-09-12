@@ -3,7 +3,7 @@
 	"package": "net.digii.tutorialmod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"BlockBreakMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

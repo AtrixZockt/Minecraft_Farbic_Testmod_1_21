@@ -34,6 +34,11 @@ public class SoundBlock extends Block {
     }
 
     @Override
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        return super.onBreak(world, pos, state, player);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         tooltip.add(Text.translatable("tooltip.tutorialmod.sound_block.tooltip").formatted(Formatting.AQUA));
         super.appendTooltip(stack, context, tooltip, options);
